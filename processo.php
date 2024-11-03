@@ -8,7 +8,7 @@
     <title>CandySystem</title>
 </head>
 <body>
-    <h1>Projeto CandySystem</h1>
+    <h1>Projeto CandySystem Eletiva</h1>
 </body>
 </html>
 
