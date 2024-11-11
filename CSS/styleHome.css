@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+
+
+    background-color: rgb(255, 173, 200);
+    height: 10vh;
+}
+header img{
+    height: 100%;
+    
+}
+header a{
+    margin-right: 5%;
+}
+header .sair{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin-right: 1%;
+}
+.sair a{
+    height: 50%;
+
+}
+.menu-lateral {
+    position: fixed;
+    top: 10vh;
+    left: 0;
+    width: 20%;
+    background-color: rgb(248, 150, 183);
+    padding: 20px;
+    border-radius: 0 0px 5px 0;
+  }
+  
+  .menu-lateral ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu-lateral li {
+    margin-bottom: 10px;
+  }
+  
+  .menu-lateral a {
+    color: rgb(116, 58, 58);
+    text-decoration: none;
+    transition: color 0.5s;
+  }
+  
+  .menu-lateral a:hover {
+    color: #ccc;
+  }
+  
+  .submenu {
+    display: none;
+    background-color: rgb(230, 95, 140);
+    padding: 5vh;
+    border-radius: 5px;
+  }
+  
+  .menu-lateral li:hover .submenu {
+    display: block;
+  }
+  
