@@ -8,8 +8,8 @@
 </head>
 <body>
 <header>
-    <a href="Main.html"><img src="/Imagens/Logo TC.png" alt=""></a>
-    <section class="sair"><a href="Main.html"><img src="/Imagens/saida.png" alt="Sair"></a></section>
+    <a href="Home.php"><img src="../Imagens/Logo TC.png" alt=""></a>
+    <section class="sair"><a href="Home.php"><img src="../Imagens/saida.png" alt="Sair"></a></section>
 </header>
 <main>
     <form id="form" method="#" action="#">
@@ -42,4 +42,4 @@
 
   </footer>
 </body>
-</html>
+</php>
