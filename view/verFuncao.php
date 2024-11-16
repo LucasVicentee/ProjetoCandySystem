@@ -14,7 +14,7 @@
 <body>
 <header>
     <a href="Main.php"><img src="../Imagens/Logo TC.png" alt=""></a>
-    <section class="sair"><a href="Main.php"><img src="../Imagens/saida.png" alt="Sair"></a></section>
+    <section class="sair"><a href="logout.php"><img src="../Imagens/saida.png" alt="Sair"></a></section>
 </header>
 <main>
 

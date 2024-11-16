@@ -71,4 +71,14 @@ function retornarFuncaoPeloId($id){
     return($listaClientes);
 }
 
+function checarLogin($usuario, $senha) {
+    $conexao = conectarBD();
+    
+    $consulta = "SELECT * FROM funcionarios WHERE nome = '$usuario' AND senha = '$senha'";
+
+    $resultado = mysqli_query($conexao, $consulta);
+
+    return (mysqli_num_rows($resultado) > 0);
+}
+
 ?>

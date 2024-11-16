@@ -1,3 +1,10 @@
+<?php
+if (!isset($_COOKIE['usuario']) || !isset($_COOKIE['senha'])) {
+    header('Location: login.php');
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -10,7 +17,7 @@
 <header>
     <a href="Main.php"><img src="../Imagens/Logo TC.png" alt="Logo"></a>
     <section class="sair">
-        <a href="Main.php"><img src="../Imagens/saida.png" alt="Logo"></a>
+        <a href="logout.php"><img src="../Imagens/saida.png" alt="Logo"></a>
     </section>
 </header>    
 <nav class="menu-lateral">
@@ -34,9 +41,9 @@
         </ul>
       </li>
     </ul>
-  </nav>
-  <footer>
+</nav>
+<footer>
 
-  </footer>
+</footer>
 </body>
 </html>
