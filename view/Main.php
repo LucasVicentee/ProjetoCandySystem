@@ -8,16 +8,18 @@
 </head>
 <body>
 <header>
-    <a href="Home.php"><img src="../Imagens/Logo TC.png" alt="Logo"></a>
+    <a href="Main.php"><img src="../Imagens/Logo TC.png" alt="Logo"></a>
     <section class="sair">
-        <a href="Home.php"><img src="../Imagens/saida.png" alt="Logo"></a>
+        <a href="Main.php"><img src="../Imagens/saida.png" alt="Logo"></a>
     </section>
 </header>    
 <nav class="menu-lateral">
     <ul>
+      <li><a href="Main.php">Home</a></li>
       <li><a href="#">Cadastrar</a>
         <ul class="submenu">
           <li><a href="cadProduto.php">Cadastrar Produto</a></li>
+          <li><a href="cadFuncao.php">Cadastrar Função</a></li>
           <li><a href="cadFuncionario.php">Cadastrar Funcionario</a></li>
           <li><a href="cadIngrediente.php">Cadastrar Ingrediente</a></li>
           <li><a href="cadReceita.php">Cadastrar Receita</a></li>
@@ -25,10 +27,10 @@
       </li>
       <li><a href="#">Vizualizar</a>
         <ul class="submenu">
-          <li><a href="VizProduto.php">Vizualizar Produto</a></li>
-          <li><a href="VizFuncionario.php">Vizualizar Funcionario</a></li>
-          <li><a href="VizIngrediente.php">Vizualizar Ingrediente</a></li>
-          <li><a href="VizReceita.php">Vizualizar Receita</a></li>
+          <li><a href="verFuncao.php">Vizualizar Funções</a></li>
+          <li><a href="verFuncionario.php">Vizualizar Funcionario</a></li>
+          <li><a href="cadEstoque.php">Vizualizar Estoque</a></li>
+          <li><a href="cadReceita.php">Vizualizar Receita</a></li>
         </ul>
       </li>
     </ul>

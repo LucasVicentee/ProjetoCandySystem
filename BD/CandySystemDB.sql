@@ -1,132 +1,71 @@
-CREATE DATABASE  IF NOT EXISTS `candysystem` /*!40100 DEFAULT CHARACTER SET utf8mb3 */ /*!80016 DEFAULT ENCRYPTION='N' */;
-USE `candysystem`;
--- MySQL dump 10.13  Distrib 8.0.40, for Win64 (x86_64)
---
--- Host: 127.0.0.1    Database: candysystem
--- ------------------------------------------------------
--- Server version	8.0.40
+create database confeitaria;
 
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!50503 SET NAMES utf8 */;
-/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
-/*!40103 SET TIME_ZONE='+00:00' */;
-/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
-/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
-/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
-/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+use confeitaria;
 
---
--- Table structure for table `cadastro_funcionario`
---
+CREATE TABLE ingrediente (
+    nome VARCHAR(100),
+    codigo int,
+    pk_id int auto_increment PRIMARY KEY,
+    data_validade date,
+    descricao VARCHAR(255),
+    fk_estoque int,
+    fk_receita int
+);
 
-DROP TABLE IF EXISTS `cadastro_funcionario`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `cadastro_funcionario` (
-  `cpf` char(14) NOT NULL,
-  `id` int NOT NULL AUTO_INCREMENT,
-  `nome_completo` varchar(50) NOT NULL,
-  `data_nascimento` date DEFAULT NULL,
-  `senha` int NOT NULL,
-  PRIMARY KEY (`cpf`),
-  UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
-/*!40101 SET character_set_client = @saved_cs_client */;
+CREATE TABLE Funcionario (
+    telefone VARCHAR(14),
+    endereco VARCHAR(255),
+    nome VARCHAR(100),
+    pk_cpf int auto_increment PRIMARY KEY,
+    fk_estoque int,
+    fk_funcoes int
+);
 
---
--- Dumping data for table `cadastro_funcionario`
---
+CREATE TABLE receita (
+    descricao VARCHAR(255),
+    nome VARCHAR(50),
+    pk_receita int auto_increment PRIMARY KEY,
+    categoria VARCHAR(100)
+);
 
-LOCK TABLES `cadastro_funcionario` WRITE;
-/*!40000 ALTER TABLE `cadastro_funcionario` DISABLE KEYS */;
-/*!40000 ALTER TABLE `cadastro_funcionario` ENABLE KEYS */;
-UNLOCK TABLES;
+CREATE TABLE estoque (
+    quantidade int,
+    pk_item_estoque int auto_increment PRIMARY KEY
+);
 
---
--- Table structure for table `cadastro_produto`
---
+CREATE TABLE Funcoes (
+    pk_id int PRIMARY KEY,
+    salario float,
+    funcao VARCHAR(20)
+);
 
-DROP TABLE IF EXISTS `cadastro_produto`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `cadastro_produto` (
-  `id_produto` int NOT NULL AUTO_INCREMENT,
-  `nome_produto` varchar(50) NOT NULL,
-  `data_fabricacao` date DEFAULT NULL,
-  `data_validade` date DEFAULT NULL,
-  `descricao_produto` varchar(250) NOT NULL,
-  `qtd_produto` int DEFAULT NULL,
-  PRIMARY KEY (`id_produto`),
-  UNIQUE KEY `id_produto` (`id_produto`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `cadastro_produto`
---
-
-LOCK TABLES `cadastro_produto` WRITE;
-/*!40000 ALTER TABLE `cadastro_produto` DISABLE KEYS */;
-/*!40000 ALTER TABLE `cadastro_produto` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `ingredientes`
---
-
-DROP TABLE IF EXISTS `ingredientes`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `ingredientes` (
-  `id_ingrediente` int NOT NULL AUTO_INCREMENT,
-  `nome_ingrediente` varchar(50) NOT NULL,
-  `data_validade_ingre` date DEFAULT NULL,
-  `qtd_ingredientes` int DEFAULT NULL,
-  PRIMARY KEY (`id_ingrediente`),
-  UNIQUE KEY `id_ingrediente` (`id_ingrediente`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `ingredientes`
---
-
-LOCK TABLES `ingredientes` WRITE;
-/*!40000 ALTER TABLE `ingredientes` DISABLE KEYS */;
-/*!40000 ALTER TABLE `ingredientes` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `receitas`
---
-
-DROP TABLE IF EXISTS `receitas`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `receitas` (
-  `nome_receita` varchar(50) NOT NULL,
-  `descricao_receita` varchar(500) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `receitas`
---
-
-LOCK TABLES `receitas` WRITE;
-/*!40000 ALTER TABLE `receitas` DISABLE KEYS */;
-/*!40000 ALTER TABLE `receitas` ENABLE KEYS */;
-UNLOCK TABLES;
-/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
-
-/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
-/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
-/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
-
--- Dump completed on 2024-11-15 20:42:49
+CREATE TABLE produto (
+    preco float,
+    pk_produto int auto_increment PRIMARY KEY,
+    fk_receita int
+);
+ 
+ALTER TABLE ingrediente ADD CONSTRAINT FK_ingrediente_2
+    FOREIGN KEY (fk_estoque)
+    REFERENCES estoque (pk_item_estoque)
+    ON DELETE CASCADE;
+ 
+ALTER TABLE ingrediente ADD CONSTRAINT FK_ingrediente_3
+    FOREIGN KEY (fk_receita)
+    REFERENCES receita (pk_receita)
+    ON DELETE CASCADE;
+ 
+ALTER TABLE Funcionario ADD CONSTRAINT FK_Funcionario_2
+    FOREIGN KEY (fk_estoque)
+    REFERENCES estoque (pk_item_estoque)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE Funcionario ADD CONSTRAINT FK_Funcionario_3
+    FOREIGN KEY (fk_funcoes)
+    REFERENCES Funcoes (pk_id)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE produto ADD CONSTRAINT FK_produto_2
+    FOREIGN KEY (fk_receita)
+    REFERENCES receita (pk_receita)
+    ON DELETE CASCADE;
