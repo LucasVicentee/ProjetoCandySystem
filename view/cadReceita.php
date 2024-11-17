@@ -1,3 +1,10 @@
+<?php
+if (!isset($_COOKIE['usuario']) || !isset($_COOKIE['senha'])) {
+    header('Location: login.php');
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
