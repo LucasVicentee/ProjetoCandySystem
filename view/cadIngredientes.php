@@ -12,7 +12,7 @@
     <section class="sair"><a href="Main.php"><img src="../Imagens/saida.png" alt="Sair"></a></section>
 </header>
 <main>
-    <form id="form" method="#" action="#">
+    <form id="form" method="POST" action="../processamento/cadIngredientesProcessamento.php">
         <h2>Cadastrar Ingrediente</h2>
         <section class="campo">
           <label for="nome">Ingrediente:</label>

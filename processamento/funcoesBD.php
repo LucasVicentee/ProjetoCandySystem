@@ -18,6 +18,30 @@ function inserirFuncao($funcao, $salario){
     mysqli_query($conexao, $consulta);
 }
 
+function inserirReceitas($nome_receita, $descricao_receita) {
+    $conexao = conectarBD();
+
+    $consulta = "INSERT INTO receitas (nome_receita, descricao_receita) VALUES ('$nome_receita', '$descricao_receita')";
+
+    mysqli_query($conexao, $consulta); 
+}
+
+function inserirProduto($id_produto, $nome_produto, $data_fabricacao, $data_validade, $descricao_produto, $qtd_produto) {
+    $conexao = conectarBD();
+
+    $consulta = "INSERT INTO produto (id_produto, nome_produto, data_fabricacao, data_validade, descricao_produto, qtd_produto) VALUES ('$id_produto', '$nome_produto','$data_fabricacao', '$data_validade', '$descricao_produto', '$qtd_produto')";
+
+    mysqli_query($conexao, $consulta);
+}
+
+function inserirIngredientes($id_ingrediente, $nome_ingrediente, $data_validade_ingre, $qtd_ingredientes) {
+    $conexao = conectarBD();
+
+    $consulta = "INSERT INTO ingredientes (id_ingrediente, nome_ingrediente, data_validade_ingre, qtd_ingredientes) VALUES ('$id_ingrediente', '$nome_ingrediente', '$data_validade_ingre','$qtd_ingredientes')";
+
+    mysqli_query($conexao, $consulta);
+}
+
 function inserirFuncionario($nome, $funcao, $cpf, $telefone, $endereco, $senha) {
     $conexao = conectarBD();
 
