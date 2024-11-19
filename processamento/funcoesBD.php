@@ -18,10 +18,10 @@ function inserirFuncao($funcao, $salario){
     mysqli_query($conexao, $consulta);
 }
 
-function inserirReceitas($nome_receita, $descricao_receita) {
+function inserirReceitas($nome, $descricao) {
     $conexao = conectarBD();
 
-    $consulta = "INSERT INTO receitas (nome_receita, descricao_receita) VALUES ('$nome_receita', '$descricao_receita')";
+    $consulta = "INSERT INTO receitas (nome_receita, descricao_receita) VALUES ('$nome', '$descricao')";
 
     mysqli_query($conexao, $consulta); 
 }
@@ -34,10 +34,10 @@ function inserirProduto($id_produto, $nome_produto, $data_fabricacao, $data_vali
     mysqli_query($conexao, $consulta);
 }
 
-function inserirIngredientes($id_ingrediente, $nome_ingrediente, $data_validade_ingre, $qtd_ingredientes) {
+function inserirIngredientes($nome, $codigo, $numero, $descricao) {
     $conexao = conectarBD();
 
-    $consulta = "INSERT INTO ingredientes (id_ingrediente, nome_ingrediente, data_validade_ingre, qtd_ingredientes) VALUES ('$id_ingrediente', '$nome_ingrediente', '$data_validade_ingre','$qtd_ingredientes')";
+    $consulta = "INSERT INTO ingredientes (id_ingrediente, nome_ingrediente, data_validade_ingre, qtd_ingredientes) VALUES ('$nome', '$codigo', '$numero', '$descricao')";
 
     mysqli_query($conexao, $consulta);
 }

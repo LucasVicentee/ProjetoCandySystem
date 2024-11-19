@@ -4,13 +4,13 @@ session_start();
 require_once "funcoesBD.php";
 
 //Cadastro de Cliente
-if(!empty($_POST['nome_receita']) && !empty($_POST['descricao_receita'])){
+if(!empty($_POST['nome']) && !empty($_POST['descricao'])){
 
-      $nome_receita = $_POST['nome_receita'];
-      $descricao_receita = $_POST['descricao_receita'];
+      $nome = $_POST['nome'];
+      $descricao = $_POST['descricao'];
 
       //Chamada da função para BD
-      inserirReceita($nome_receita, $descricao_receita);
+      inserirReceita($nome, $descricao);
 
       header('Location:../view/cadReceitaProcessamento.php');
       die();
