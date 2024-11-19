@@ -1,5 +1,10 @@
 <?php
     require_once "../processamento/funcoesBD.php";
+
+    if (!isset($_COOKIE['usuario']) || !isset($_COOKIE['senha'])) {
+        header('Location: login.php');
+        exit();
+    }
 ?>
 
 <!DOCTYPE html>

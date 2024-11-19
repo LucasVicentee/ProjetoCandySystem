@@ -10,8 +10,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         setcookie("usuario", $usuario, time() + (30 * 60), "/");
         setcookie("senha", $senha, time() + (30 * 60), "/");
 
-        $_SESSION['mensagem'] = "<p class='sucesso'>Login bem-sucedido!</p>";
-
         header('Location: ../view/Main.php');
         exit();
     } else {

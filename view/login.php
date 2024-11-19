@@ -33,7 +33,6 @@ if (isset($_COOKIE['usuario']) && isset($_COOKIE['senha'])) {
         <button type="submit">Entrar</button>
     </form>
 
-    <!-- Exibe a mensagem de erro ou sucesso -->
     <?php 
     if ($mensagem != "") {
         echo $mensagem;
