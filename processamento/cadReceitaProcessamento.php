@@ -2,7 +2,7 @@
 
 session_start();
 require_once "funcoesBD.php";
-
+//Só para atualizar
 //Cadastro de Cliente
 if(!empty($_POST['nome']) && !empty($_POST['descricao'])){
 
