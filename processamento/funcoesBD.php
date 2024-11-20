@@ -11,9 +11,9 @@ function conectarBD(){
 
 function inserirFuncao($funcao, $salario){
 
-    $conexao = conectarBD(); //Canal de comunicação entre APP e BD
+    $conexao = conectarBD(); 
 
-    $consulta = "INSERT INTO funcoes (funcao, salario) VALUES ('$funcao', '$salario')"; //Query que será aplicada no SGBD
+    $consulta = "INSERT INTO funcoes (funcao, salario) VALUES ('$funcao', '$salario')";
 
     mysqli_query($conexao, $consulta);
 }
@@ -26,18 +26,18 @@ function inserirReceitas($nome, $descricao) {
     mysqli_query($conexao, $consulta); 
 }
 
-function inserirProduto($id_produto, $nome_produto, $data_fabricacao, $data_validade, $descricao_produto, $qtd_produto) {
+function inserirProduto($nome_produto, $data_validade, $data_fabricacao, $descricao_produto, $qtd_produto) {
     $conexao = conectarBD();
 
-    $consulta = "INSERT INTO produto (id_produto, nome_produto, data_fabricacao, data_validade, descricao_produto, qtd_produto) VALUES ('$id_produto', '$nome_produto','$data_fabricacao', '$data_validade', '$descricao_produto', '$qtd_produto')";
+    $consulta = "INSERT INTO produto (nome_produto, data_validade, data_fabricacao, descricao_produto, qtd_produto) VALUES ('$nome_produto', '$id_produto','$data_validade', '$data_fabricacao', '$descricao_produto', '$qtd_produto')";
 
     mysqli_query($conexao, $consulta);
 }
 
-function inserirIngredientes($nome, $codigo, $numero, $descricao) {
+function inserirIngredientes($nome, $numero, $descricao) {
     $conexao = conectarBD();
 
-    $consulta = "INSERT INTO ingredientes (id_ingrediente, nome_ingrediente, data_validade_ingre, qtd_ingredientes) VALUES ('$nome', '$codigo', '$numero', '$descricao')";
+    $consulta = "INSERT INTO ingredientes (nome_ingrediente, data_validade_ingre, qtd_ingredientes) VALUES ('$nome','$numero', '$descricao')";
 
     mysqli_query($conexao, $consulta);
 }

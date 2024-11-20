@@ -28,7 +28,7 @@ if (!isset($_COOKIE['usuario']) || !isset($_COOKIE['senha'])) {
           <li><a href="cadProduto.php">Cadastrar Produto</a></li>
           <li><a href="cadFuncao.php">Cadastrar Função</a></li>
           <li><a href="cadFuncionario.php">Cadastrar Funcionario</a></li>
-          <li><a href="cadIngrediente.php">Cadastrar Ingrediente</a></li>
+          <li><a href="cadIngredientes.php">Cadastrar Ingrediente</a></li>
           <li><a href="cadReceita.php">Cadastrar Receita</a></li>
         </ul>
       </li>
@@ -36,8 +36,9 @@ if (!isset($_COOKIE['usuario']) || !isset($_COOKIE['senha'])) {
         <ul class="submenu">
           <li><a href="verFuncao.php">Vizualizar Funções</a></li>
           <li><a href="verFuncionario.php">Vizualizar Funcionario</a></li>
-          <li><a href="cadEstoque.php">Vizualizar Estoque</a></li>
-          <li><a href="cadReceita.php">Vizualizar Receita</a></li>
+          <li><a href="verIngredientes.php">Vizualizar Ingredientes</a></li>
+          <li><a href="verReceitas.php">Vizualizar Receita</a></li>
+          <li><a href="verProdutos.php">Vizualizar Produtos</a></li>
         </ul>
       </li>
     </ul>

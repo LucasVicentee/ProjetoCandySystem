@@ -3,18 +3,17 @@
 session_start();
 require_once "funcoesBD.php";
 
-//Cadastro de Cliente
-if(!empty($_POST['nome']) && !empty($_POST['codigo']) && !empty($_POST['numero']) && !empty($_POST['descricao'])){
 
-      $nome = $_POST['nome'];
-      $codigo = $_POST['codigo'];
-      $numero = $_POST['numero'];
-      $descricao = $_POST['descricao'];
+if(!empty($_POST['nome_ingrediente']) && !empty($_POST['data_validade_ingre']) && !empty($_POST['qtd_ingredientes'])){
 
-      //Chamada da função para BD
-      inserirProduto($nome, $codigo, $numero, $descricao);
+      $nome = $_POST['nome_ingrediente'];
+      $numero = $_POST['data_validade_ingre'];
+      $descricao = $_POST['qtd_ingredientes'];
 
-      header('Location:../view/cadIngredientesProcessamento.php');
+
+      inserirIngredientes($nome, $numero, $descricao);
+
+      header('Location:../view/cadIngredientes.php');
       die();
 }
 

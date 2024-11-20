@@ -23,11 +23,11 @@ if (!isset($_COOKIE['usuario']) || !isset($_COOKIE['senha'])) {
         <h2>Cadastrar Receita</h2>
         <section class="campo">
           <label for="nome">Receita:</label>
-          <input type="text" id="nome" name="nome"  required>
+          <input type="text" id="nome" name="nome_receita"  required>
         </section>
         <section class="campo">
-            <label for="cpf">Descrição:</label>
-            <textarea name="descricao" id="code" required></textarea>
+            <label for="descricao">Descrição:</label>
+            <textarea name="descricao_receita" id="code" required></textarea>
           </section>   
         <button type="submit">Enviar</button>
       </form>

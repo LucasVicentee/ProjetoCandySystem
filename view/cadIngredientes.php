@@ -23,19 +23,15 @@ if (!isset($_COOKIE['usuario']) || !isset($_COOKIE['senha'])) {
         <h2>Cadastrar Ingrediente</h2>
         <section class="campo">
           <label for="nome">Ingrediente:</label>
-          <input type="text" id="nome" name="nome"  required>
+          <input type="text" id="nome" name="nome_ingre"  required>
         </section>
         <section class="campo">
-          <label for="code">Codigo:</label>
-          <input type="number" id="Code" name="codigo" required>
-        </section>
-        <section class="campo">
-            <label for="phone">Data de Validade:</label>
-            <input type="date" id="Code" name="numero" required>
+            <label for="validade_ingrediente">Data de Validade:</label>
+            <input type="date" id="Code" name="data_validade_ingre" required>
           </section>
         <section class="campo">
-            <label for="cpf">Descrição:</label>
-            <textarea name="descricao" id="code" required></textarea>
+            <label for="quantidade">quantidade:</label>
+            <input name="qtd_ingre" id="code" required>
           </section>   
         <button type="submit">Enviar</button>
       </form>
