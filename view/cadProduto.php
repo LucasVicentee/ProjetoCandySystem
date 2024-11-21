@@ -42,7 +42,7 @@ if (!isset($_COOKIE['usuario']) || !isset($_COOKIE['senha'])) {
           <input type="number" id="Code" name="qtd_produto"  required>
         </section>
         <section class="campo">
-          <label for="quantidade">preço:</label>
+          <label for="quantidade">Preço:</label>
           <input type="number" id="Code" name="preco"  required>
         </section>
         <button type="submit">Enviar</button>

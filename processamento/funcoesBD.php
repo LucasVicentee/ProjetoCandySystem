@@ -26,10 +26,10 @@ function inserirReceitas($nome, $descricao) {
     mysqli_query($conexao, $consulta); 
 }
 
-function inserirProduto($nome_produto, $data_validade, $data_fabricacao, $descricao_produto, $qtd_produto) {
+function inserirProduto($nome_produto, $data_fabricacao, $data_validade, $descricao_produto, $qtd_produto, $preco) {
     $conexao = conectarBD();
 
-    $consulta = "INSERT INTO produto (nome_produto, data_validade, data_fabricacao, descricao_produto, qtd_produto) VALUES ('$nome_produto', '$id_produto','$data_validade', '$data_fabricacao', '$descricao_produto', '$qtd_produto')";
+    $consulta = "INSERT INTO produto (nome_produto, data_fabricacao, data_validade, descricao_produto, qtd_produto, preco) VALUES ('$nome_produto','$data_fabricacao', '$data_validade', '$descricao_produto', '$qtd_produto', '$preco')";
 
     mysqli_query($conexao, $consulta);
 }
