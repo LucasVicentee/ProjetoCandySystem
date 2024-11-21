@@ -74,22 +74,22 @@ function retornarFuncoes(){
     return($listaClientes);
 }
 
-function retornarProdutos(){
+function retornarProdutosPeloId($id){
 
     $conexao = conectarBD(); 
     
-    $consulta = "SELECT * FROM produto";
+    $consulta = "SELECT * FROM produto WHERE id_produto = '$id'";
 
     $listaProdutos = mysqli_query($conexao, $consulta);
 
     return($listaProdutos);
 }
 
-function retornarIngredientes(){
+function retornarIngredientesPeloId($id){
 
     $conexao = conectarBD(); 
     
-    $consulta = "SELECT * FROM ingredientes";
+    $consulta = "SELECT * FROM ingredientes WHERE id_ingrediente = '$id'";
 
     $listaIngredientes = mysqli_query($conexao, $consulta);
 
