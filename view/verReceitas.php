@@ -22,5 +22,20 @@
     <section class="sair"><a href="logout.php"><img src="../Imagens/saida.png" alt="Sair"></a></section>
 </header>
 <main>
+<section>
+<?php
+    $listaReceitas = retornarReceitas();
+
+    while ($receitas = mysqli_fetch_assoc($listaReceitas)) {
+        echo "
+        <section class='conteudo-bloco'>
+            <h2>Receita: {$receitas['nome_receita']}</h2>
+            <p><strong>Descrição:</strong> {$receitas['descricao_receita']}</p>
+
+        </section>
+        ";
+    }
+?>
+</section>
 </main>
 </html>

@@ -30,7 +30,7 @@ if (!isset($_COOKIE['usuario']) || !isset($_COOKIE['senha'])) {
             <input type="date" id="Code" name="data_validade_ingre" required>
           </section>
         <section class="campo">
-            <label for="quantidade">quantidade:</label>
+            <label for="quantidade">Quantidade:</label>
             <input name="qtd_ingredientes" id="code" required>
           </section>   
         <button type="submit">Enviar</button>

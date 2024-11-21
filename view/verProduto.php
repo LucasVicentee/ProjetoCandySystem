@@ -22,5 +22,24 @@
     <section class="sair"><a href="logout.php"><img src="../Imagens/saida.png" alt="Sair"></a></section>
 </header>
 <main>
+<section>
+<?php
+    $listaProdutos = retornarProdutos();
+
+    while ($produto = mysqli_fetch_assoc($listaProdutos)) {
+        echo "
+        <section class='conteudo-bloco'>
+            <h2>Produto: {$produto['nome_produto']}</h2>
+            <p><strong>Produto ID:</strong> {$produto['id_produto']}</p>
+            <p><strong>Data de Validade:</strong><br> {$produto['data_validade']}</p>
+            <p><strong>Data de Fabricação:</strong><br> {$produto['data_fabricacao']}</p>
+            <p><strong>Quantidade:</strong> {$produto['qtd_produto']}</p>
+            <p><strong>Descrição:</strong> {$produto['descricao_produto']}</p>
+            <p><strong>Preço:</strong> R$ " . number_format($produto['preco'], 2, ',', '.') . "</p>
+        </section>
+        ";
+    }
+?>
+</section>
 </main>
 </html>

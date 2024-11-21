@@ -32,13 +32,13 @@ if (!isset($_COOKIE['usuario']) || !isset($_COOKIE['senha'])) {
           <li><a href="cadReceita.php">Cadastrar Receita</a></li>
         </ul>
       </li>
-      <li><a href="#">Vizualizar</a>
+      <li><a href="#">Visualizar</a>
         <ul class="submenu">
-          <li><a href="verFuncao.php">Vizualizar Funções</a></li>
-          <li><a href="verFuncionario.php">Vizualizar Funcionario</a></li>
-          <li><a href="verIngredientes.php">Vizualizar Ingredientes</a></li>
-          <li><a href="verReceitas.php">Vizualizar Receita</a></li>
-          <li><a href="verProdutos.php">Vizualizar Produtos</a></li>
+          <li><a href="verFuncao.php">Visualizar Funções</a></li>
+          <li><a href="verFuncionario.php">Visualizar Funcionario</a></li>
+          <li><a href="verIngredientes.php">Visualizar Ingredientes</a></li>
+          <li><a href="verReceitas.php">Visualizar Receita</a></li>
+          <li><a href="verProduto.php">Visualizar Produtos</a></li>
         </ul>
       </li>
     </ul>
