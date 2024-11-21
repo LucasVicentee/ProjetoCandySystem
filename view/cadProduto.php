@@ -26,12 +26,12 @@ if (!isset($_COOKIE['usuario']) || !isset($_COOKIE['senha'])) {
           <input type="text" id="nome" name="nome_produto"  required>
         </section>
           <section class="campo">
-            <label for="data_validade">Data de validade:</label>
-            <input type="date" id="Code" name="data_validade_produto"  required>
+            <label for="data_validade">Data de Validade:</label>
+            <input type="date" id="Code" name="data_validade"  required>
           </section>
           <section class="campo">
-            <label for="data_fabricacao">Data de Fabricação</label>
-            <input type="date" id="Code" name="data_fabricacao_produto"  required>
+            <label for="data_fabricacao">Data de Fabricação:</label>
+            <input type="date" id="Code" name="data_fabricacao"  required>
           </section>
         <section class="campo">
           <label for="descricao">Descrição do Produto:</label>
@@ -40,6 +40,10 @@ if (!isset($_COOKIE['usuario']) || !isset($_COOKIE['senha'])) {
         <section class="campo">
           <label for="quantidade">Quantidade do Produto:</label>
           <input type="number" id="Code" name="qtd_produto"  required>
+        </section>
+        <section class="campo">
+          <label for="quantidade">preço:</label>
+          <input type="number" id="Code" name="preco"  required>
         </section>
         <button type="submit">Enviar</button>
       </form>
