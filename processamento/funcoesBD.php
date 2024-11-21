@@ -65,7 +65,7 @@ function inserirFuncionario($nome, $funcao, $cpf, $telefone, $endereco, $senha) 
 
 function retornarFuncoes(){
 
-    $conexao = conectarBD(); //Canal de comunicação entre APP e BD
+    $conexao = conectarBD(); 
     
     $consulta = "SELECT * FROM funcoes";
 
@@ -74,9 +74,42 @@ function retornarFuncoes(){
     return($listaClientes);
 }
 
+function retornarProdutos(){
+
+    $conexao = conectarBD(); 
+    
+    $consulta = "SELECT * FROM produto";
+
+    $listaProdutos = mysqli_query($conexao, $consulta);
+
+    return($listaProdutos);
+}
+
+function retornarIngredientes(){
+
+    $conexao = conectarBD(); 
+    
+    $consulta = "SELECT * FROM ingredientes";
+
+    $listaIngredientes = mysqli_query($conexao, $consulta);
+
+    return($listaIngredientes);
+}
+
+function retornarReceitas(){
+
+    $conexao = conectarBD(); 
+    
+    $consulta = "SELECT * FROM receitas";
+
+    $listaReceitas = mysqli_query($conexao, $consulta);
+
+    return($listaReceitas);
+}
+
 function retornarFuncionarios(){
 
-    $conexao = conectarBD(); //Canal de comunicação entre APP e BD
+    $conexao = conectarBD(); 
     
     $consulta = "SELECT * FROM funcionarios";
 
@@ -86,7 +119,7 @@ function retornarFuncionarios(){
 }
 
 function retornarFuncaoPeloId($id){
-    $conexao = conectarBD(); //Canal de comunicação entre APP e BD
+    $conexao = conectarBD(); 
     
     $consulta = "SELECT * FROM funcoes WHERE pk_funcao = '$id'";
 
