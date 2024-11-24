@@ -15,7 +15,7 @@ if (!isset($_COOKIE['usuario']) || !isset($_COOKIE['senha'])) {
 </head>
 <body>
 <header>
-    <a href="Main.php"><img src="../Imagens/Logo TC.png" alt=""></a>
+    <a href="Home.php"><img src="../Imagens/Logo TC.png" alt=""></a>
     <section class="sair"><a href="logout.php"><img src="../Imagens/saida.png" alt="Sair"></a></section>
 </header>
 <main>

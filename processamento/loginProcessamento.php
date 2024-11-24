@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         setcookie("usuario", $usuario, time() + (30 * 60), "/");
         setcookie("senha", $senha, time() + (30 * 60), "/");
 
-        header('Location: ../view/Main.php');
+        header('Location: ../view/Home.php');
         exit();
     } else {
         $_SESSION['mensagem'] = "<p class='erro'>Usuário ou senha inválidos!</p>";
