@@ -6,7 +6,7 @@ $mensagem = isset($_SESSION['mensagem']) ? $_SESSION['mensagem'] : "";
 unset($_SESSION['mensagem']);
 
 if (isset($_COOKIE['usuario']) && isset($_COOKIE['senha'])) {
-    header('Location: Main.php');
+    header('Location: Home.php');
     exit();
 }
 ?>
