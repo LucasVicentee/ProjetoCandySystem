@@ -16,6 +16,6 @@ Um sistema para gerenciamento de confeitaria feito para a matéria de Eletivas I
 
 ## Funcionalidades
 
-- Cadastro de Funções, Funcionarios, Receitas e Ingredientes
-- Visualização de Funções, Funcionarios, Receitas e Ingredientes
+- Cadastro de Funções, Funcionarios, Receitas, Produtos e Ingredientes
+- Visualização de Funções, Funcionarios, Receitas, Produtos e Ingredientes
 - Autenticação e persistencia por cookies
